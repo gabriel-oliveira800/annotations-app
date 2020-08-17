@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data/constants.dart';
+import 'home_page.dart';
 
 void main() => runApp(Annotations());
 
@@ -9,11 +10,13 @@ class Annotations extends StatelessWidget {
     return MaterialApp(
       title: 'Annotations',
       theme: ThemeData(
-        primarySwatch: primaryColor,
+        fontFamily: 'Poppins',
         accentColor: accentColor,
+        primaryColor: primaryColor,
+        scaffoldBackgroundColor: primaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Container(),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
