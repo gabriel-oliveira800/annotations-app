@@ -1,16 +1,37 @@
-# annotations
 
-A new Flutter project.
+<h1 align="center">
+  <br>
+  <a href=""><img src="./assets/icons/calendar.svg" alt="Todo" width="200"></a>
+  <br>
+  Notes Todo 
+  <br>
+</h1>
 
-## Getting Started
+ <h4 align="center">To start using the flutter you can access <a href="https://flutter.dev" target="_blank">Flutter</a>.</h4>
 
-This project is a starting point for a Flutter application.
+ <p float="left">
+  <img src="screenshoot.png" width="100%">
+</p>
+.
 
-A few resources to get you started if this is your first Flutter project:
+## How to use
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+To clone and run thi application, you will need [Git](https://git-scm.com) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+```bash
+#Clone this repository
+$ git clone https://github.com/gabriel-oliveira800/annotations-app
+
+#Go into the repository
+$cd annotations-app
+
+# Install dependencies
+$ flutter packages get
+
+# Run the app
+$ flutter run
+
+# Build app
+$flutter build apk
+```
