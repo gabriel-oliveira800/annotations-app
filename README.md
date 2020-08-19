@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href=""><img src="./assets/icons/calendar.svg" alt="Todo" width="200"></a>
+  <a href=""><img src="logo.png" alt="Notes" width="200"></a>
   <br>
   Notes Todo 
   <br>
