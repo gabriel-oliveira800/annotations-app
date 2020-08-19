@@ -3,8 +3,11 @@ import 'package:annotations/data/constants.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-  final String urlImage =
-      'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80';
+  final String urlImage;
+  final Function onPressed;
+
+  const Header({Key key, @required this.urlImage, this.onPressed})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +48,7 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Gerencie suas tarefas',
+                  'Good morning',
                   style: TextStyle(
                     color: textColor,
                   ),
@@ -54,10 +57,13 @@ class Header extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Icon(
-            Icons.search,
-            size: 34,
-            color: textColor,
+          IconButton(
+            icon: Icon(
+              Icons.add,
+              size: 28,
+              color: textColor,
+            ),
+            onPressed: onPressed,
           ),
         ],
       ),

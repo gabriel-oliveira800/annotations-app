@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class TabItems extends StatelessWidget {
   final int selected;
   final bool expanded;
+  final Duration duration;
   final double widthContent;
 
   final List<Tabs> tabs;
@@ -19,6 +20,7 @@ class TabItems extends StatelessWidget {
     @required this.tabs,
     this.expanded = false,
     this.widthContent = 60,
+    this.duration = const Duration(milliseconds: 300),
   }) : super(key: key);
 
   @override
@@ -52,7 +54,7 @@ class TabItems extends StatelessWidget {
             vertical: 18.0,
             horizontal: expanded ? 24 : 8,
           ),
-          duration: const Duration(milliseconds: 500),
+          duration: duration,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,53 +62,36 @@ class TabItems extends StatelessWidget {
               if (index == tabs.length) {
                 return InkWell(
                   onTap: () => expandedItens(!expanded),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      if (expanded)
-                        Expanded(
-                          child: Text(
-                            'click to expanded',
-                            style: TextStyle(color: pupleWhite),
-                          ),
-                        ),
-                      Icon(
-                        expanded
-                            ? Icons.arrow_back_ios
-                            : Icons.arrow_forward_ios,
-                        color: pupleWhite,
-                        size: heightContent / 18,
-                      ),
-                    ],
+                  child: Center(
+                    child: Icon(
+                      expanded ? Icons.arrow_back_ios : Icons.arrow_forward_ios,
+                      color: pupleWhite,
+                      size: heightContent / 18,
+                    ),
                   ),
                 );
               }
 
               final Tabs item = tabs[index];
 
-              return InkWell(
-                onTap: () => onTap(index),
-                child: Row(
-                  mainAxisAlignment: expanded
-                      ? MainAxisAlignment.start
-                      : MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      item.icon,
-                      size: heightContent / 14,
-                      color: selected == index ? pupleWhite : item.color,
-                    ),
-                    if (expanded) SizedBox(width: 18),
-                    if (expanded)
-                      Text(
-                        item.label,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: selected == index ? pupleWhite : item.color,
-                        ),
-                      )
-                  ],
+              return ListTile(
+                title: Text(
+                  item.label,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: selected == index ? pupleWhite : item.color,
+                  ),
                 ),
+                leading: Icon(
+                  item.icon,
+                  size: heightContent / 14,
+                  color: selected == index ? pupleWhite : item.color,
+                ),
+                contentPadding: expanded
+                    ? EdgeInsets.zero
+                    : EdgeInsets.symmetric(horizontal: 8.0),
+                onTap: () => onTap(index),
               );
             }),
           ),
