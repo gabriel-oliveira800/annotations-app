@@ -12,6 +12,8 @@
  <p float="left">
   <img src="screenshoot.png" width="100%">
 </p>
+
+![video](https://user-images.githubusercontent.com/60442055/90582502-4662fd00-e1a4-11ea-9247-3050a39f6371.gif)
 .
 
 ## How to use
