@@ -8,6 +8,7 @@
 </h1>
 
  <h4 align="center">To start using the flutter you can access <a href="https://flutter.dev" target="_blank">Flutter</a>.</h4>
+ <h3>Animated notes and reminders app with Flutter.</h3>
 
  <p float="left">
   <img src="screenshoot.png" width="100%">
