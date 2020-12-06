@@ -19,7 +19,7 @@
 
 ## How to use
 
-To clone and run thi application, you will need [Git](https://git-scm.com) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer.
+To clone and run this application, you will need [Git](https://git-scm.com) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer.
 
 
 ```bash
